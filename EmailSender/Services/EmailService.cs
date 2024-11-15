@@ -29,7 +29,7 @@ namespace EmailSender.Services
             smtpClient.UseDefaultCredentials = false;
 
             smtpClient.Credentials = new NetworkCredential(email, password);
-
+            
             var fullBody = "from: " + name + " (" + receptor + ")" + "\n\n" + body;
 
             var message = new MailMessage(receptor, email!, subject, fullBody);
