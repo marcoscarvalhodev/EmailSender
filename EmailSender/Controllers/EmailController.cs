@@ -18,7 +18,7 @@ namespace EmailSender.Controllers
         public async Task <IActionResult> SendEmail(string name, string receptor, string subject, string body)
         {
             await emailService.SendEmail(name, receptor, subject, body);
-
+     
             return Ok();
         }
     }
